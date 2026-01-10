@@ -2,8 +2,6 @@
 
 A modern, responsive, and production-ready personal portfolio website built with **Next.js 14 (App Router)**, **TypeScript**, and **Tailwind CSS**. Designed for high performance, SEO optimization, and static deployment.
 
-![Portfolio Preview](public/profile.jpeg)
-
 ## 🚀 Key Features
 
 *   **Next.js 14 (App Router)**: Utilizing the latest Next.js features for optimal performance and developer experience.
