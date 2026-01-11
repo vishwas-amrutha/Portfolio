@@ -5,17 +5,19 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://example.com"; // Replace with your actual domain
+    // Use a fixed date for static builds to avoid cache invalidation
+    const lastModified = new Date("2026-01-11");
 
     return [
         {
             url: baseUrl,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: "monthly",
             priority: 1,
         },
         {
             url: `${baseUrl}/contact`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: "yearly",
             priority: 0.8,
         },
