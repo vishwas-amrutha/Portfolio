@@ -1,33 +1,13 @@
 import { Project } from "@/components/ProjectCard";
 
 export const projects: Project[] = [
-    {
-        id: "company-website",
-        title: "IIB Website",
-        category: "Web Development",
-        description:
-            "Developed an official production website using Next.js with a headless CMS architecture. The project focused on creating a scalable, SEO-optimized platform with comprehensive analytics integration for tracking user behavior and business metrics.",
-        techStack: [
-            "Next.js",
-            "Strapi CMS",
-            "REST APIs",
-            "SEO",
-            "Google Analytics 4",
-        ],
-        highlights: [
-            "Integrated Strapi CMS using REST APIs with populate[] queries for flexible content management",
-            "Built reusable UI components and CMS schemas for scalable content updates",
-            "Implemented comprehensive SEO: dynamic meta tags, Open Graph tags, sitemap generation",
-            "Configured server-side rendering for optimal search engine indexing",
-            "Integrated GA4 to track page views, route changes, and user behavior",
-            "Collaborated with designers and senior engineers to deliver business-aligned features",
-        ],
-        demoUrl: "https://iib.gov.in/",
-    },
+    // Work Projects (at IIB)
     {
         id: "ipran",
         title: "iPRAN - Insurance Industry Application",
         category: "Full Stack / Enterprise",
+        projectType: "work",
+        companyName: "IIB",
         description:
             "iPRAN is an industry-level real-time application used by all general insurance insurers in India. Led complete UI redesign, implemented comprehensive authentication and security systems, and integrated SMTP mail triggers for automated notifications.",
         techStack: [
@@ -52,30 +32,62 @@ export const projects: Project[] = [
         ],
     },
     {
-        id: "missed-call-explainer-bot",
-        title: "Missed Call Explainer Bot",
-        category: "Telegram Bot / AI",
+        id: "fire-api",
+        title: "Fire API - Validation Processing System",
+        category: "Backend / Performance",
+        projectType: "work",
+        companyName: "IIB",
         description:
-            "A Telegram bot that explains unknown missed calls in India using rule-based logic with AI fallback. Features intelligent classification of spam, promotional, banking, delivery, and personal calls with risk assessment and actionable recommendations.",
+            "Fire API is a validation processing system built with Django. Optimized the caching mechanism on UAT server to dramatically reduce validation time from 30 minutes to just 77 seconds for 1,500 records — a ~96% performance improvement.",
         techStack: [
-            "Node.js",
-            "Telegram Bot API",
-            "OpenAI API",
-            "Rule-based Classification",
+            "Django",
+            "Cron Jobs",
+            "Caching Optimization",
+            "Validation Processing",
+            "Performance Tuning",
         ],
         highlights: [
-            "Built rule-based classification engine with priority-based pattern matching for 140/160 prefixes, keywords, and number formats",
-            "Implemented STD code detection with city mapping for 12+ major Indian cities (Delhi, Mumbai, Kolkata, etc.)",
-            "Integrated OpenAI API as intelligent fallback for ambiguous or unclassified cases",
-            "Designed risk assessment system (Low/Medium/High) with clear action recommendations",
-            "Created educational context for each classification to help users understand call types",
+            "Identified performance bottlenecks in the validation processing workflow on UAT server",
+            "Redesigned and optimized the caching mechanism for efficient data retrieval",
+            "Reduced validation time from 30 minutes to 77 seconds for 1,500 records (~96% improvement)",
+            "Implemented cron jobs for scheduled validation tasks and automated processing",
+            "Implemented efficient data processing strategies to minimize redundant operations",
+            "Improved overall system throughput and user experience on UAT environment",
         ],
-        githubUrl: "https://github.com/vishwas-amrutha/missed-call-explainer-bot",
     },
+    {
+        id: "company-website",
+        title: "IIB Website",
+        category: "Web Development",
+        projectType: "work",
+        companyName: "IIB",
+        description:
+            "Official production website for Insurance Information Bureau of India. Taking full ownership of development and maintenance. Built using Next.js with headless CMS architecture, focusing on scalability, SEO optimization, and comprehensive analytics.",
+        techStack: [
+            "Next.js",
+            "Strapi CMS",
+            "REST APIs",
+            "SEO",
+            "Google Analytics 4",
+        ],
+        highlights: [
+            "Taking full ownership of website development and maintenance",
+            "Integrated Strapi CMS using REST APIs with populate[] queries for flexible content management",
+            "Built reusable UI components and CMS schemas for scalable content updates",
+            "Implemented comprehensive SEO: dynamic meta tags, Open Graph tags, sitemap generation",
+            "Configured server-side rendering for optimal search engine indexing",
+            "Integrated GA4 to track page views, route changes, and user behavior",
+            "Collaborated with designers and senior engineers to deliver business-aligned features",
+        ],
+        demoUrl: "https://iib.gov.in/",
+    },
+
+    // Personal Projects
     {
         id: "meeting-mate",
         title: "MeetingMate",
         category: "Chrome Extension / AI",
+        projectType: "personal",
         description:
             "A Chrome Extension that transforms raw meeting notes into actionable outputs using AI. Features role-based output generation, adjustable tone settings, and one-click copy functionality for summaries, action items, emails, and status updates.",
         techStack: [
@@ -96,25 +108,25 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/vishwas-amrutha/MeetingMate---Extension",
     },
     {
-        id: "fire-api",
-        title: "Fire API - Validation Processing System",
-        category: "Backend / Performance",
+        id: "missed-call-explainer-bot",
+        title: "Missed Call Explainer Bot",
+        category: "Telegram Bot / AI",
+        projectType: "personal",
         description:
-            "Fire API is a validation processing system built with Django. Optimized the caching mechanism on UAT server to dramatically reduce validation time from 30 minutes to just 77 seconds for 1,500 records — a ~96% performance improvement.",
+            "A Telegram bot that explains unknown missed calls in India using rule-based logic with AI fallback. Features intelligent classification of spam, promotional, banking, delivery, and personal calls with risk assessment and actionable recommendations.",
         techStack: [
-            "Django",
-            "Cron Jobs",
-            "Caching Optimization",
-            "Validation Processing",
-            "Performance Tuning",
+            "Node.js",
+            "Telegram Bot API",
+            "OpenAI API",
+            "Rule-based Classification",
         ],
         highlights: [
-            "Identified performance bottlenecks in the validation processing workflow on UAT server",
-            "Redesigned and optimized the caching mechanism for efficient data retrieval",
-            "Reduced validation time from 30 minutes to 77 seconds for 1,500 records (~96% improvement)",
-            "Implemented cron jobs for scheduled validation tasks and automated processing",
-            "Implemented efficient data processing strategies to minimize redundant operations",
-            "Improved overall system throughput and user experience on UAT environment",
+            "Built rule-based classification engine with priority-based pattern matching for 140/160 prefixes, keywords, and number formats",
+            "Implemented STD code detection with city mapping for 12+ major Indian cities (Delhi, Mumbai, Kolkata, etc.)",
+            "Integrated OpenAI API as intelligent fallback for ambiguous or unclassified cases",
+            "Designed risk assessment system (Low/Medium/High) with clear action recommendations",
+            "Created educational context for each classification to help users understand call types",
         ],
+        githubUrl: "https://github.com/vishwas-amrutha/missed-call-explainer-bot",
     },
 ];

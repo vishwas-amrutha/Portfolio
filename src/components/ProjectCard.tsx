@@ -7,6 +7,8 @@ export interface Project {
     techStack: string[];
     highlights: string[];
     category: string;
+    projectType?: "work" | "personal";
+    companyName?: string;
     demoUrl?: string;
     githubUrl?: string;
 }
@@ -18,11 +20,19 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
     return (
         <article className="group bg-card border border-border rounded-2xl p-6 md:p-8 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/30">
-            {/* Category Badge */}
-            <div className="mb-4">
+            {/* Category and Project Type Badges */}
+            <div className="mb-4 flex flex-wrap items-center gap-2">
                 <span className="text-xs font-semibold uppercase tracking-wider text-primary">
                     {project.category}
                 </span>
+                {project.projectType && (
+                    <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${project.projectType === "work"
+                            ? "bg-blue-500/10 text-blue-500 border border-blue-500/20"
+                            : "bg-green-500/10 text-green-500 border border-green-500/20"
+                        }`}>
+                        {project.projectType === "work" ? `@ ${project.companyName || "Work"}` : "Personal Project"}
+                    </span>
+                )}
             </div>
 
             {/* Title with Link */}

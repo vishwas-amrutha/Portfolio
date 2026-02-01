@@ -6,6 +6,8 @@ import { FloatingProjectsButton } from "@/components/FloatingProjectsButton";
 import { ScrollTopButton } from "@/components/ScrollTopButton";
 import { skillCategories } from "@/data/skills";
 import { projects } from "@/data/projects";
+import { experience } from "@/data/experience";
+import { education } from "@/data/education";
 import Image from "next/image";
 
 export default function Home() {
@@ -197,6 +199,68 @@ export default function Home() {
                   unauthorized access and automated attacks.
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Experience Section */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold mb-8">
+              <span className="gradient-text">Experience</span>
+            </h3>
+            <div className="space-y-4">
+              {experience.map((exp) => (
+                <div
+                  key={exp.company}
+                  className="bg-card border border-border rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
+                >
+                  <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
+                    <div>
+                      <h4 className="text-lg font-semibold text-card-foreground">
+                        {exp.role}
+                      </h4>
+                      <p className="text-primary font-medium">
+                        {exp.companyFull} ({exp.company})
+                      </p>
+                    </div>
+                    <span className="text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full">
+                      {exp.duration}
+                    </span>
+                  </div>
+                  <p className="text-muted-foreground">{exp.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Education Section */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold mb-8">
+              <span className="gradient-text">Education</span>
+            </h3>
+            <div className="space-y-4">
+              {education.map((edu) => (
+                <div
+                  key={edu.institution}
+                  className="bg-card border border-border rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
+                >
+                  <div className="flex flex-wrap items-start justify-between gap-2">
+                    <div>
+                      <h4 className="text-lg font-semibold text-card-foreground">
+                        {edu.institution}
+                      </h4>
+                      <p className="text-primary font-medium">{edu.degree}</p>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full">
+                        {edu.year}
+                      </span>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        CGPA: <span className="text-foreground font-medium">{edu.cgpa}</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
