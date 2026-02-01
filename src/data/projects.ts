@@ -38,7 +38,7 @@ export const projects: Project[] = [
         projectType: "work",
         companyName: "IIB",
         description:
-            "Fire API is a validation processing system built with Django. Optimized the caching mechanism on UAT server to dramatically reduce validation time from 30 minutes to just 77 seconds for 1,500 records — a ~96% performance improvement.",
+            "Fire API is a validation processing system built with Django. Optimized the caching mechanism to dramatically reduce validation time from 30 minutes to just 77 seconds for 1,500 records — a ~96% performance improvement. Deployed to both UAT and production environments.",
         techStack: [
             "Django",
             "Cron Jobs",
@@ -47,12 +47,12 @@ export const projects: Project[] = [
             "Performance Tuning",
         ],
         highlights: [
-            "Identified performance bottlenecks in the validation processing workflow on UAT server",
+            "Identified performance bottlenecks in the validation processing workflow",
             "Redesigned and optimized the caching mechanism for efficient data retrieval",
             "Reduced validation time from 30 minutes to 77 seconds for 1,500 records (~96% improvement)",
             "Implemented cron jobs for scheduled validation tasks and automated processing",
             "Implemented efficient data processing strategies to minimize redundant operations",
-            "Improved overall system throughput and user experience on UAT environment",
+            "Successfully deployed optimizations to both UAT and production environments",
         ],
     },
     {
