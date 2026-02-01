@@ -7,14 +7,19 @@ export const skillCategories: SkillCategory[] = [
     {
         name: "Backend / Programming",
         skills: [
+            "Python",
             "Java",
-            "Python (FastAPI)",
+            "FastAPI",
+            "Django",
+            "Node.js",
             "REST APIs",
             "MS SQL Server",
+            "MongoDB",
             "Session-based Authentication",
             "Rate Limiting",
             "Account Lockout Systems",
             "Session Binding",
+            "Telegram Bot API",
         ],
     },
     {
@@ -23,6 +28,7 @@ export const skillCategories: SkillCategory[] = [
             "JavaScript / TypeScript",
             "Angular 16",
             "Next.js (SSR, SSG, Dynamic Routing)",
+            "Chrome Extension (Manifest V3)",
             "HTML / CSS",
             "SEO Optimization",
             "Responsive Design",
@@ -55,6 +61,24 @@ export const skillCategories: SkillCategory[] = [
             "Admin UI Development",
             "SPA Routing",
             "Performance Optimization",
+        ],
+    },
+    {
+        name: "AI / APIs",
+        skills: [
+            "OpenAI API",
+            "Groq API (Llama 3.3)",
+            "AI-powered Classification",
+            "Prompt Engineering",
+        ],
+    },
+    {
+        name: "DevOps / Deployment",
+        skills: [
+            "SSH / Linux (Ubuntu)",
+            "AWS Amplify",
+            "Railway",
+            "CI/CD Basics",
         ],
     },
 ];
