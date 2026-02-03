@@ -119,7 +119,7 @@ export default function Home() {
             <Button href="/contact" variant="outline" size="lg">
               Contact Me
             </Button>
-            <Button href="/Amrutha_Vishwas_Resume.pdf" variant="outline" size="lg">
+            <Button href="/Vishwas_Resume_new.pdf" variant="outline" size="lg">
               <span className="flex items-center gap-2">
                 <svg
                   className="w-5 h-5"
